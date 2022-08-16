@@ -17,10 +17,85 @@ button {
   font-size: 1rem;
   color: var(--Medium-Gray);
   font-weight: 500;
+  cursor: pointer;
 }
 button:hover {
   color: var(--Almost-Black);
 }
 h1 {
   font-size: 2rem;
+}
+/* 
+=======================================
+=======================================
+            navigation
+=======================================
+=======================================
+*/
+.nav-buttons {
+  display: none;
+}
+.nav-center {
+  width: 90vw;
+  margin: 1.5rem auto;
+}
+.logo-and-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 
+=======================================
+=======================================
+            image section
+=======================================
+=======================================
+*/
+main {
+  display: grid;
+  gap: 3rem;
+}
+.image-section img {
+  width: 100%;
+}
+.text-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  margin-bottom: 1.5rem;
+}
+p {
+  max-width: 90vw;
+  font-size: 0.9rem;
+  margin: 0 auto;
+  color: var(--Medium-Gray);
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.learn-more-btn {
+  background: var(--Almost-Black);
+  padding: 0.8em 1.3em;
+  color: var(--Almost-White);
+  border-radius: 0.6rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.learn-more-btn:hover {
+  color: var(--Almost-White);
+}
+.clients-list {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.clients-list img {
+  width: 80%;
+  cursor: pointer;
 }

@@ -88,7 +88,7 @@ h1 {
 .nav-links-container button {
   margin-bottom: 1rem;
   margin-right: 0.4rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 .login-buttons {
   margin: 0 auto;
@@ -104,6 +104,18 @@ h1 {
 .register-btn:hover {
   color: var(--Almost-Black);
   outline: 0.05rem solid var(--Almost-Black);
+}
+/* sidebar submenu */
+.sidebar-submenu {
+  list-style: none;
+  margin-left: 1.5rem;
+  display: none;
+}
+.sidebar-submenu img {
+  margin-right: 0.5rem;
+}
+.show-sidebar-submenu {
+  display: block;
 }
 /* 
 =======================================

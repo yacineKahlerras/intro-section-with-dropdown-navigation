@@ -44,6 +44,35 @@ h1 {
   align-items: center;
   justify-content: space-between;
 }
+.sidebar-container {
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.644);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.sidebar {
+  width: 14rem;
+  height: 100%;
+  position: absolute;
+  background: white;
+  top: 0;
+  right: 0;
+  padding: 2rem;
+}
+.sidebar-bg {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
 /* 
 =======================================
 =======================================
@@ -59,6 +88,8 @@ main {
   width: 100%;
 }
 .text-section {
+  width: 90%;
+  margin: 0 auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -69,7 +100,6 @@ h1 {
   margin-bottom: 1.5rem;
 }
 p {
-  max-width: 90vw;
   font-size: 0.9rem;
   margin: 0 auto;
   color: var(--Medium-Gray);
@@ -83,12 +113,15 @@ p {
   border-radius: 0.6rem;
   font-weight: 700;
   margin-bottom: 3rem;
+  transition: 0.2s;
 }
 .learn-more-btn:hover {
-  color: var(--Almost-White);
+  color: var(--Almost-Black);
+  background: var(--Almost-White);
+  outline: 0.1rem solid var(--Almost-Black);
 }
 .clients-list {
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;

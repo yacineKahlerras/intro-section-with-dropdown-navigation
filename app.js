@@ -11,12 +11,21 @@ const btnHandler = (btn) => {
   ) {
     sidebarContainer.classList.toggle("show-sidebar");
     sidebarSubmenus.forEach((s) => s.classList.remove("show-sidebar-submenu"));
+    activeDropDowns = [...document.querySelectorAll(".sidebar-arrow-up")];
+    activeDropDowns.forEach((b) => {
+      b.classList.toggle("sidebar-arrow-down");
+      b.classList.toggle("sidebar-arrow-up");
+    });
   }
   if (btn.classList.contains("features-sidebar")) {
     sidebarSubmenus[0].classList.toggle("show-sidebar-submenu");
+    btn.classList.toggle("sidebar-arrow-down");
+    btn.classList.toggle("sidebar-arrow-up");
   }
   if (btn.classList.contains("company-sidebar")) {
     sidebarSubmenus[1].classList.toggle("show-sidebar-submenu");
+    btn.classList.toggle("sidebar-arrow-down");
+    btn.classList.toggle("sidebar-arrow-up");
   }
 };
 

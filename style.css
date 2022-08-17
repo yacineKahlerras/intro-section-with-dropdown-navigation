@@ -90,6 +90,18 @@ h1 {
   margin-right: 0.4rem;
   font-weight: 500;
 }
+.sidebar-arrow-up {
+  background-image: url("./images/icon-arrow-up.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 2em;
+}
+.sidebar-arrow-down {
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 2em;
+}
 .login-buttons {
   margin: 0 auto;
   display: flex;

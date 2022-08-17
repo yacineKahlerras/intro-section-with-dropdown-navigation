@@ -23,21 +23,11 @@ const btnHandler = (btn) => {
   }
   // nav features dropdown
   if (btn.classList.contains("nav-features")) {
-    navebarSubmenus[0].classList.toggle("show-navbar-submenu");
-    let box = btn.getBoundingClientRect();
-    let top = box.bottom;
-    let left = (box.left + box.right) / 2;
-    navebarSubmenus[0].style.top = `${top}px`;
-    navebarSubmenus[0].style.left = `${left}px`;
+    toggleNavSubmenu(0, btn);
   }
   // nav company dropdown
   if (btn.classList.contains("nav-company")) {
-    navebarSubmenus[1].classList.toggle("show-navbar-submenu");
-    let box = btn.getBoundingClientRect();
-    let top = box.bottom;
-    let left = (box.left + box.right) / 2;
-    navebarSubmenus[1].style.top = `${top}px`;
-    navebarSubmenus[1].style.left = `${left}px`;
+    toggleNavSubmenu(1, btn);
   }
 };
 
@@ -59,6 +49,21 @@ const setResetSidebar = () => {
     b.classList.toggle("sidebar-arrow-down");
     b.classList.toggle("sidebar-arrow-up");
   });
+};
+
+/** toggles the nav submenu */
+const toggleNavSubmenu = (index, btn) => {
+  navebarSubmenus[index].classList.toggle("show-navbar-submenu");
+  bottomCenterElement(index, btn);
+};
+
+/** sets element to the bottom center position of element */
+const bottomCenterElement = (index, btn) => {
+  let box = btn.getBoundingClientRect();
+  let top = box.bottom;
+  let left = (box.left + box.right) / 2;
+  navebarSubmenus[index].style.top = `${top}px`;
+  navebarSubmenus[index].style.left = `${left}px`;
 };
 
 /** listeners */

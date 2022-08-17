@@ -5,28 +5,41 @@ const sidebarSubmenus = [...document.querySelectorAll(".sidebar-submenu")];
 
 /** handles all button clicks */
 const btnHandler = (btn) => {
+  // show/close sidebar
   if (
     btn.classList.contains("btn-toggle") ||
     btn.classList.contains("close-button")
   ) {
-    sidebarContainer.classList.toggle("show-sidebar");
-    sidebarSubmenus.forEach((s) => s.classList.remove("show-sidebar-submenu"));
-    activeDropDowns = [...document.querySelectorAll(".sidebar-arrow-up")];
-    activeDropDowns.forEach((b) => {
-      b.classList.toggle("sidebar-arrow-down");
-      b.classList.toggle("sidebar-arrow-up");
-    });
+    setResetSidebar();
   }
+  // features dropdown
   if (btn.classList.contains("features-sidebar")) {
-    sidebarSubmenus[0].classList.toggle("show-sidebar-submenu");
-    btn.classList.toggle("sidebar-arrow-down");
-    btn.classList.toggle("sidebar-arrow-up");
+    sidebarDropDown(0, btn);
   }
+  // company dropdown
   if (btn.classList.contains("company-sidebar")) {
-    sidebarSubmenus[1].classList.toggle("show-sidebar-submenu");
-    btn.classList.toggle("sidebar-arrow-down");
-    btn.classList.toggle("sidebar-arrow-up");
+    sidebarDropDown(1, btn);
   }
+};
+
+/** activates or disables the dropdown */
+const sidebarDropDown = (index, btn) => {
+  sidebarSubmenus[index].classList.toggle("show-sidebar-submenu");
+  btn.classList.toggle("sidebar-arrow-down");
+  btn.classList.toggle("sidebar-arrow-up");
+};
+
+/** reset sidebar dropdowns */
+const setResetSidebar = () => {
+  sidebarContainer.classList.toggle("show-sidebar");
+  sidebarSubmenus.forEach((s) => s.classList.remove("show-sidebar-submenu"));
+  const activeDropDownBtns = [
+    ...document.querySelectorAll(".sidebar-arrow-up"),
+  ];
+  activeDropDownBtns.forEach((b) => {
+    b.classList.toggle("sidebar-arrow-down");
+    b.classList.toggle("sidebar-arrow-up");
+  });
 };
 
 /** listeners */

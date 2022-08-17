@@ -11,6 +11,9 @@
   font-weight: 500;
   font-size: 18px;
 }
+body {
+  background: var(--Almost-White);
+}
 button {
   background: transparent;
   border: none;
@@ -60,7 +63,7 @@ h1 {
   width: 14rem;
   height: 100%;
   position: absolute;
-  background: white;
+  background: var(--Almost-White);
   top: 0;
   right: 0;
   padding: 2rem;
@@ -281,6 +284,7 @@ p {
     justify-content: flex-end;
   }
   h1 {
+    width: 110%;
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 0.9;
@@ -327,7 +331,7 @@ p {
     align-items: baseline;
     gap: 0.9em;
 
-    background: white;
+    background: var(--Almost-White);
     box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.103);
     padding: 1.5em 1em;
     border-radius: 0.6em;

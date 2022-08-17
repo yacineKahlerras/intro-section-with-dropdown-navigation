@@ -111,7 +111,7 @@ h1 {
 .register-btn {
   outline: 0.05rem solid var(--Medium-Gray);
   padding: 0.5em 1em;
-  border-radius: 0.3rem;
+  border-radius: 0.9em;
 }
 .register-btn:hover {
   color: var(--Almost-Black);
@@ -129,10 +129,17 @@ h1 {
 .show-sidebar-submenu {
   display: block;
 }
+/* navbar submenu */
+.navbar-submenu {
+  opacity: 0;
+  z-index: -1;
+}
 @media (min-width: 830px) {
   .nav-center {
+    width: 95vw;
     display: grid;
     grid-template-columns: auto 1fr;
+    margin-top: 0;
   }
   .btn-toggle {
     display: none;
@@ -156,6 +163,18 @@ h1 {
     gap: 2rem;
     margin: 0;
   }
+  .navbar-arrow-down {
+    background-image: url("./images/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 1em;
+  }
+  .navbar-arrow-up {
+    background-image: url("./images/icon-arrow-up.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-right: 1em;
+  }
 }
 /* 
 =======================================
@@ -171,6 +190,13 @@ main {
 .image-section img {
   width: 100%;
 }
+/* 
+=======================================
+=======================================
+            text section
+=======================================
+=======================================
+*/
 .text-section {
   width: 90%;
   margin: 0 auto;
@@ -195,7 +221,7 @@ p {
   padding: 0.8em 1.3em;
   color: var(--Almost-White);
   border-radius: 0.6rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 3rem;
   transition: 0.2s;
 }
@@ -222,20 +248,47 @@ p {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    align-items: flex-end;
+    gap: 9rem;
     margin: 0 auto;
   }
   .image-section {
-    width: 100%;
+    width: 90%;
+    max-width: 27rem;
+    align-self: flex-start;
   }
   .image-section img {
     content: url("./images/image-hero-desktop.png");
   }
   .text-section {
     width: 100%;
+    margin: 0;
+    max-width: 27rem;
     text-align: left;
     align-items: baseline;
+    justify-content: flex-end;
+  }
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 0.9;
+    margin-bottom: 3rem;
+  }
+  p {
+    width: 80%;
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .learn-more-btn {
+    margin-bottom: 5rem;
+  }
+  .clients-list {
+    margin-bottom: 0;
+  }
+  .clients-list img {
+    width: 100%;
+    cursor: pointer;
   }
   /* 
   ==================================
@@ -258,7 +311,7 @@ p {
     gap: 0.9em;
 
     background: white;
-    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.192);
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.103);
     padding: 1.5em 1em;
     border-radius: 0.6em;
     list-style: none;

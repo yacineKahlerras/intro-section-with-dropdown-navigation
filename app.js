@@ -55,6 +55,7 @@ const setResetSidebar = () => {
 const toggleNavSubmenu = (index, btn) => {
   navebarSubmenus[index].classList.toggle("show-navbar-submenu");
   bottomCenterElement(index, btn);
+  btn.classList.toggle("navbar-arrow-up");
 };
 
 /** sets element to the bottom center position of element */
@@ -66,7 +67,14 @@ const bottomCenterElement = (index, btn) => {
   navebarSubmenus[index].style.left = `${left}px`;
 };
 
+/** disable all desktop dropdowns */
+const disableDesktopDropDowns = () => {
+  navebarSubmenus.forEach((n) => n.classList.remove("show-navbar-submenu"));
+  btns.forEach((b) => b.classList.remove("navbar-arrow-up"));
+};
+
 /** listeners */
+document.body.addEventListener("click", disableDesktopDropDowns, true);
 btns.forEach((b) => {
   b.addEventListener("click", () => btnHandler(b));
 });

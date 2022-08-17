@@ -243,6 +243,9 @@ p {
   cursor: pointer;
 }
 @media (min-width: 830px) {
+  :root {
+    font-size: 13px;
+  }
   main {
     width: 80%;
     display: flex;
@@ -287,7 +290,7 @@ p {
     margin-bottom: 0;
   }
   .clients-list img {
-    width: 100%;
+    width: 5rem;
     cursor: pointer;
   }
   @media (min-width: 1100px) {

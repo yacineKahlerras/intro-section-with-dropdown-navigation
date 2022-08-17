@@ -339,7 +339,8 @@ p {
     opacity: 0;
     z-index: -1;
 
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, -30%);
+    transition: 0.2s;
   }
   .navbar-submenu li {
     width: auto;
@@ -358,6 +359,7 @@ p {
     margin-right: 0.8rem;
   }
   .show-navbar-submenu {
+    transform: translate(-50%, 10%);
     opacity: 1;
     z-index: 3;
   }

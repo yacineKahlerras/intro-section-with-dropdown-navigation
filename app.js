@@ -2,6 +2,7 @@
 const btns = [...document.getElementsByTagName("button")];
 const sidebarContainer = document.querySelector(".sidebar-container");
 const sidebarSubmenus = [...document.querySelectorAll(".sidebar-submenu")];
+const navebarSubmenus = [...document.querySelectorAll(".navbar-submenu")];
 
 /** handles all button clicks */
 const btnHandler = (btn) => {
@@ -22,9 +23,21 @@ const btnHandler = (btn) => {
   }
   // nav features dropdown
   if (btn.classList.contains("nav-features")) {
+    navebarSubmenus[0].classList.toggle("show-navbar-submenu");
+    let box = btn.getBoundingClientRect();
+    let top = box.bottom;
+    let left = (box.left + box.right) / 2;
+    navebarSubmenus[0].style.top = `${top}px`;
+    navebarSubmenus[0].style.left = `${left}px`;
   }
   // nav company dropdown
   if (btn.classList.contains("nav-company")) {
+    navebarSubmenus[1].classList.toggle("show-navbar-submenu");
+    let box = btn.getBoundingClientRect();
+    let top = box.bottom;
+    let left = (box.left + box.right) / 2;
+    navebarSubmenus[1].style.top = `${top}px`;
+    navebarSubmenus[1].style.left = `${left}px`;
   }
 };
 

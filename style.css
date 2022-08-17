@@ -237,4 +237,48 @@ p {
     text-align: left;
     align-items: baseline;
   }
+  /* 
+  ==================================
+  ==================================
+            dropdown 
+  ==================================
+  ==================================
+  */
+  .dropdown-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .navbar-submenu {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.9em;
+
+    background: white;
+    box-shadow: 0rem 0rem 4rem rgba(0, 0, 0, 0.192);
+    padding: 2em;
+    border-radius: 0.6em;
+    list-style: none;
+    opacity: 0;
+    z-index: -1;
+
+    transform: translate(-50%, 10%);
+  }
+  .navbar-submenu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+  .navbar-submenu img {
+    width: 1em;
+    margin-right: 0.8rem;
+  }
+  .show-navbar-submenu {
+    opacity: 1;
+    z-index: 3;
+  }
 }

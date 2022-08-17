@@ -190,6 +190,12 @@ main {
 .image-section img {
   width: 100%;
 }
+.hero-img-mobile {
+  display: block;
+}
+.hero-img-desktop {
+  display: none;
+}
 /* 
 =======================================
 =======================================
@@ -260,8 +266,11 @@ p {
     max-width: 27rem;
     align-self: flex-start;
   }
-  .image-section img {
-    content: url("./images/image-hero-desktop.png");
+  .hero-img-mobile {
+    display: none;
+  }
+  .hero-img-desktop {
+    display: block;
   }
   .text-section {
     width: 100%;

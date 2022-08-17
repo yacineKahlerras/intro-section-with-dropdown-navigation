@@ -129,6 +129,34 @@ h1 {
 .show-sidebar-submenu {
   display: block;
 }
+@media (min-width: 830px) {
+  .nav-center {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+  .btn-toggle {
+    display: none;
+  }
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 4rem;
+  }
+  .nav-links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .login-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+  }
+}
 /* 
 =======================================
 =======================================
@@ -187,4 +215,26 @@ p {
 .clients-list img {
   width: 80%;
   cursor: pointer;
+}
+@media (min-width: 830px) {
+  main {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto;
+  }
+  .image-section {
+    width: 100%;
+  }
+  .image-section img {
+    content: url("./images/image-hero-desktop.png");
+  }
+  .text-section {
+    width: 100%;
+    text-align: left;
+    align-items: baseline;
+  }
 }

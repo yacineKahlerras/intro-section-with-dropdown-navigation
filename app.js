@@ -12,13 +12,19 @@ const btnHandler = (btn) => {
   ) {
     setResetSidebar();
   }
-  // features dropdown
+  // sidebar features dropdown
   if (btn.classList.contains("features-sidebar")) {
     sidebarDropDown(0, btn);
   }
-  // company dropdown
+  // sidebar company dropdown
   if (btn.classList.contains("company-sidebar")) {
     sidebarDropDown(1, btn);
+  }
+  // nav features dropdown
+  if (btn.classList.contains("nav-features")) {
+  }
+  // nav company dropdown
+  if (btn.classList.contains("nav-company")) {
   }
 };
 
